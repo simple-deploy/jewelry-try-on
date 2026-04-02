@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jewelry Try-On (YouCam AI)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div
+            style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 2rem; flex-direction: column;">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                <h1 style="margin: 0;" id="pageTitle">✨ Bracelet Try-On</h1>
+            </div>
+            <div style="display: flex; gap: 20px; font-family: sans-serif;">
+                <label style="cursor: pointer; font-weight: bold;">
+                    <input type="radio" name="jewelryType" value="bracelet" checked style="accent-color: #d4af37;">
+                    Bracelet
+                </label>
+                <label style="cursor: pointer; font-weight: bold;">
+                    <input type="radio" name="jewelryType" value="necklace" style="accent-color: #d4af37;"> Necklace
+                </label>
+            </div>
+        </div>
+
+        <div class="upload-section">
+            <div class="upload-box">
+                <label>Upload Your Photo</label>
+                <input type="file" id="humanInput" accept="image/*">
+                <img id="humanPreview" class="preview-img" style="display: none;" />
+            </div>
+
+            <div class="upload-box">
+                <label id="itemLabel">Upload Bracelet</label>
+                <input type="file" id="clothInput" accept="image/*">
+                <img id="clothPreview" class="preview-img" style="display: none;" />
+            </div>
+        </div>
+
+        <button id="generateBtn">Generate Try-On (Automated AI)</button>
+
+        <div id="status" style="margin-top: 20px; font-weight: bold; color: #d4af37;"></div>
+
+        <div class="result">
+            <img id="outputImage" style="max-width: 100%; border-radius: 8px;" />
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
